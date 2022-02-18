@@ -61,11 +61,13 @@ client.on('message', (message) => {
 
         attempt = ''
         for(i = 0; i < 5; i++){
-            if(guess[i] == answer[i]){
-                attempt += '🟩';
-            }
-            else if(answer.includes(guess[i])){
-                attempt += '🟨';
+            if(answer.includes(guess[i])){
+                if(guess[i] == answer[i]){
+                    attempt += '🟩';
+                }else{
+                    attempt += '🟨';
+                }
+                
             }
             else{
                 attempt += '⬛';
