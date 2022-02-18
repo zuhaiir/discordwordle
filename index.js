@@ -1,3 +1,4 @@
+require('dotenv').config();
 const Discord = require('discord.js');
 const client = new Discord.Client({ intents: [Discord.Intents.FLAGS.GUILDS] });
 const fs = require('fs');
@@ -87,4 +88,4 @@ client.on('message', (message) => {
     }
 })
 
-client.login('OTQxMDY4OTEyNTA4OTU2Njkz.YgQkuA.04a6-dPTmwSwVgx6zpM-Kxz1eIQ');
+client.login(process.env.TOKEN);
